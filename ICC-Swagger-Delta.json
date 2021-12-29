@@ -1,0 +1,721 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "apps.inventorycc.com",
+  "basePath" : "/apis/batchinventorydcv3/api/BatchApiChanges",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "tags" : [ "ICC-Swagger-delta" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "ICC-Swagger-delta",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Dealers",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        },{
+          "name" : "Apikey",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "format",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }
+		, {
+          "name" : "UpdatesFrom",
+          "in" : "query",
+          "description" : null,
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ICC-Swagger-delta"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ICC-Swagger-delta##Inventory##listOfVehicles##VehicleInfo##ExtendedDescriptions" : {
+      "properties" : {
+        "ExtendedVehicleName" : {
+          "type" : "string"
+        },
+        "ExtendedBodyStyle" : {
+          "type" : "string"
+        },
+        "ExtendedDrivetrain" : {
+          "type" : "string"
+        },
+        "ExtendedEngineType" : {
+          "type" : "string"
+        },
+        "ExtendedDisplacement" : {
+          "type" : "string"
+        },
+        "ExtendedFuelSystem" : {
+          "type" : "string"
+        },
+        "ExtendedTransmissionDescripCont" : {
+          "type" : "string"
+        },
+        "ExtendedTransType" : {
+          "type" : "string"
+        },
+        "ExtendedBestmakename" : {
+          "type" : "string"
+        },
+        "ExtendedBestmodelname" : {
+          "type" : "string"
+        },
+        "ExtendedBeststylename" : {
+          "type" : "string"
+        },
+        "ExtendedBesttrimname" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##VehicleInfo" : {
+      "properties" : {
+        "VehicleID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerName" : {
+          "type" : "string"
+        },
+        "IsNew" : {
+          "type" : "boolean"
+        },
+        "VIN" : {
+          "type" : "string"
+        },
+        "StockNumber" : {
+          "type" : "string"
+        },
+        "IsCertified" : {
+          "type" : "boolean"
+        },
+        "Year" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Make" : {
+          "type" : "string"
+        },
+        "Model" : {
+          "type" : "string"
+        },
+        "ModelCode" : {
+          "type" : "string"
+        },
+        "Trim" : {
+          "type" : "string"
+        },
+        "BodyName" : {
+          "type" : "string"
+        },
+        "BodyStyle" : {
+          "type" : "string"
+        },
+        "CityMPG" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "HwyMPG" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DaysInSotck" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ValueSource" : {
+          "type" : "string"
+        },
+        "ExteriorColor" : {
+          "type" : "string"
+        },
+        "InteriorColor" : {
+          "type" : "string"
+        },
+        "InteriorMaterial" : {
+          "type" : "string"
+        },
+        "Engine" : {
+          "type" : "string"
+        },
+        "Transmission" : {
+          "type" : "string"
+        },
+        "TransmissionSpeed" : {
+          "type" : "string"
+        },
+        "Comments" : {
+          "type" : "string"
+        },
+        "Comments2" : {
+          "type" : "string"
+        },
+        "Comments3" : {
+          "type" : "string"
+        },
+        "Comments4" : {
+          "type" : "string"
+        },
+        "Comments5" : {
+          "type" : "string"
+        },
+        "InStockDate" : {
+          "type" : "string"
+        },
+        "LastModifiedDate" : {
+          "type" : "string"
+        },
+        "IsSpecial" : {
+          "type" : "boolean"
+        },
+        "BodyType" : {
+          "type" : "string"
+        },
+        "Locked" : {
+          "type" : "string"
+        },
+        "VehicleStatus" : {
+          "type" : "string"
+        },
+        "DealerCertified1" : {
+          "type" : "boolean"
+        },
+        "DealerCertified2" : {
+          "type" : "boolean"
+        },
+        "GenericExteriorColor" : {
+          "type" : "string"
+        },
+        "VideoUrl" : {
+          "type" : "string"
+        },
+        "Drivetrain" : {
+          "type" : "string"
+        },
+        "Mileage" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Category1" : {
+          "type" : "string"
+        },
+        "Category2" : {
+          "type" : "string"
+        },
+        "Category3" : {
+          "type" : "string"
+        },
+        "Category4" : {
+          "type" : "string"
+        },
+        "Category5" : {
+          "type" : "string"
+        },
+        "ExtendedDescriptions" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##VehicleInfo##ExtendedDescriptions"
+        },
+        "Style" : {
+          "type" : "string"
+        },
+        "ChromeStyleID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ZipCode" : {
+          "type" : "string"
+        },
+        "ExportDealerID" : {
+          "type" : "string"
+        },
+        "EngineFuelType" : {
+          "type" : "string"
+        },
+        "ExteriorGenericColorDescription" : {
+          "type" : "string"
+        },
+        "ExteriorColorCode" : {
+          "type" : "string"
+        },
+        "OneOwner" : {
+          "type" : "string"
+        },
+        "VehicleHistoryReportLink" : {
+          "type" : "string"
+        },
+        "InteriorColorCode" : {
+          "type" : "string"
+        },
+        "DoorCount" : {
+          "type" : "string"
+        },
+        "EngineDisplacement" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfPhotos" : {
+      "properties" : {
+        "VehiclePhotoID" : {
+          "type" : "string"
+        },
+        "PhotoUrl" : {
+          "type" : "string"
+        },
+        "Order" : {
+          "type" : "number"
+        },
+        "PhotoTimestamp" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfOptions" : {
+      "properties" : {
+        "Code" : {
+          "type" : "string"
+        },
+        "Type" : {
+          "type" : "string"
+        },
+        "Description" : {
+          "type" : "string"
+        },
+        "Header" : {
+          "type" : "string"
+        },
+        "Msrp" : {
+          "type" : "number"
+        },
+        "ImageUrl" : {
+          "type" : "string"
+        },
+        "Order" : {
+          "type" : "number"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##Pricing" : {
+      "properties" : {
+        "Cost" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "List" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Special" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice1" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice2" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice3" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAppliedOffers" : {
+      "properties" : {
+        "Price" : {
+          "type" : "string"
+        },
+        "Amount" : {
+          "type" : "number"
+        },
+        "OfferName" : {
+          "type" : "string"
+        },
+        "OfferDescription" : {
+          "type" : "string"
+        },
+        "OfferStartDate" : {
+          "type" : "string"
+        },
+        "OfferEndDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##PremiumOptions##SubOptions" : {
+      "properties" : {
+        "OptionalOptionID" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "Code" : {
+          "type" : "string"
+        },
+        "Msrp" : {
+          "type" : "number"
+        },
+        "Invoice" : {
+          "type" : "number"
+        },
+        "IsChecked" : {
+          "type" : "boolean"
+        },
+        "packageParentID" : {
+          "type" : "string"
+        },
+        "packageID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##PremiumOptions" : {
+      "properties" : {
+        "Code" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "SubOptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##PremiumOptions##SubOptions"
+          }
+        },
+        "Msrp" : {
+          "type" : "number"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList##programValueList##termList" : {
+      "properties" : {
+        "to" : {
+          "type" : "number"
+        },
+        "from" : {
+          "type" : "number"
+        },
+        "valueType" : {
+          "type" : "string"
+        },
+        "financialDisclosure" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "number"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList##programValueList" : {
+      "properties" : {
+        "description" : {
+          "type" : "string"
+        },
+        "termList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList##programValueList##termList"
+          }
+        },
+        "cash" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList" : {
+      "properties" : {
+        "tierStart" : {
+          "type" : "string"
+        },
+        "tierEnd" : {
+          "type" : "string"
+        },
+        "tiers" : {
+          "type" : "string"
+        },
+        "programValueList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList##programValueList"
+          }
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue" : {
+      "properties" : {
+        "valueVariationList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue##valueVariationList"
+          }
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers" : {
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "Target" : {
+          "type" : "string"
+        },
+        "OwnershipStatus" : {
+          "type" : "string"
+        },
+        "Description" : {
+          "type" : "string"
+        },
+        "EndDate" : {
+          "type" : "string"
+        },
+        "Price" : {
+          "type" : "string"
+        },
+        "programValue" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers##programValue"
+        },
+        "DealerID" : {
+          "type" : "number"
+        },
+        "StackabilityList" : {
+          "type" : "string"
+        },
+        "IncentiveID" : {
+          "type" : "number"
+        },
+        "ProgrammerNumber" : {
+          "type" : "string"
+        },
+        "Priority" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList##programValueList##termList" : {
+      "properties" : {
+        "to" : {
+          "type" : "number"
+        },
+        "from" : {
+          "type" : "number"
+        },
+        "valueType" : {
+          "type" : "string"
+        },
+        "financialDisclosure" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "number"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList##programValueList" : {
+      "properties" : {
+        "description" : {
+          "type" : "string"
+        },
+        "termList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList##programValueList##termList"
+          }
+        },
+        "cash" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList" : {
+      "properties" : {
+        "tierStart" : {
+          "type" : "string"
+        },
+        "tierEnd" : {
+          "type" : "string"
+        },
+        "tiers" : {
+          "type" : "string"
+        },
+        "programValueList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList##programValueList"
+          }
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue" : {
+      "properties" : {
+        "valueVariationList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue##valueVariationList"
+          }
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers" : {
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "Target" : {
+          "type" : "string"
+        },
+        "OwnershipStatus" : {
+          "type" : "string"
+        },
+        "Description" : {
+          "type" : "string"
+        },
+        "EndDate" : {
+          "type" : "string"
+        },
+        "Price" : {
+          "type" : "string"
+        },
+        "programValue" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers##programValue"
+        },
+        "DealerID" : {
+          "type" : "number"
+        },
+        "StackabilityList" : {
+          "type" : "string"
+        },
+        "IncentiveID" : {
+          "type" : "number"
+        },
+        "ProgrammerNumber" : {
+          "type" : "string"
+        },
+        "Priority" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory##listOfVehicles" : {
+      "properties" : {
+        "VehicleInfo" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##VehicleInfo"
+        },
+        "ListOfPhotos" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfPhotos"
+          }
+        },
+        "ListOfOptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfOptions"
+          }
+        },
+        "Pricing" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##Pricing"
+        },
+        "ListOfAppliedOffers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAppliedOffers"
+          }
+        },
+        "PremiumOptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##PremiumOptions"
+          }
+        },
+        "ListOfAvailableOffers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfAvailableOffers"
+          }
+        },
+        "ListOfShowOffers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles##ListOfShowOffers"
+          }
+        }
+      }
+    },
+    "ICC-Swagger-delta##Inventory" : {
+      "properties" : {
+        "listOfVehicles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-delta##Inventory##listOfVehicles"
+          }
+        },
+        "Count" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "ICC-Swagger-delta##Error" : {
+      "properties" : {
+        "Code" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-delta" : {
+      "properties" : {
+        "Inventory" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Inventory"
+        },
+        "Error" : {
+          "$ref" : "#/definitions/ICC-Swagger-delta##Error"
+        },
+        "ResponseDate" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
