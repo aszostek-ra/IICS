@@ -44,7 +44,8 @@
           "in" : "query",
           "description" : null,
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+	  "value": "2021-12-28T18:00:09.1840741%2B08:00"
         } ],
         "responses" : {
           "200" : {
