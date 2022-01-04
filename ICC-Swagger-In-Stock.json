@@ -1,0 +1,121 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "apps.inventorycc.com",
+  "basePath" : "/apis/batchinventorydcv3/api/batchApiVins",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "tags" : [ "ICC-Swagger-In-Stock" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "ICC-Swagger-In-Stock",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Dealers",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        },{
+          "name" : "Apikey",
+          "in" : "query",
+          "description" : null,
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "format",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ICC-Swagger-In-Stock"
+            }
+          }
+        }
+      }
+    }
+  },
+ "definitions" : {
+"ICC-Swagger-In-Stock##Inventory##listOfVehicles##VehicleInfo" : {
+      "properties" : {
+        "VehicleID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerName" : {
+          "type" : "string"
+        },
+        "IsNew" : {
+          "type" : "boolean"
+        },
+        "VIN" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-In-Stock##Inventory##listOfVehicles" : {
+      "properties" : {
+        "VehicleInfo" : {
+          "$ref" : "#/definitions/ICC-Swagger-In-Stock##Inventory##listOfVehicles##VehicleInfo"
+        }
+        }
+      },
+    "ICC-Swagger-In-Stock##Inventory" : {
+      "properties" : {
+        "listOfVehicles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ICC-Swagger-In-Stock##Inventory##listOfVehicles"
+          }
+        },
+        "Count" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "ICC-Swagger-In-Stock##Error" : {
+      "properties" : {
+        "Code" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ICC-Swagger-In-Stock" : {
+      "properties" : {
+        "Inventory" : {
+          "$ref" : "#/definitions/ICC-Swagger-In-Stock##Inventory"
+        },
+        "Error" : {
+          "$ref" : "#/definitions/ICC-Swagger-In-Stock##Error"
+        },
+        "ResponseDate" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
